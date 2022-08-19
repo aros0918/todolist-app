@@ -17,7 +17,7 @@ const Todolist = () => {
 
   useEffect(() => {
     const data = localStorage.getItem("todolist");
-    setList(JSON.parse(data));
+    if (data) setList(JSON.parse(data));
   }, []);
 
   useEffect(() => {
